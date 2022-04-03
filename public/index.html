@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-  <link rel="stylesheet" href="../src/css/style.css">
-  <title>Todo-App</title>
-</head>
-<body>
-  <script src="../src/js/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>Todo-App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="input-select">
+        <section class="input">
+          <input type="text" placeholder="Add New Todo" />
+          <img class="input__add" src="./assets/add.svg" />
+        </section>
+        <select>
+          <option value="">All</option>
+          <option value="">Completed</option>
+          <option value="">Uncompleted</option>
+        </select>
+        <img class="sort" src="./assets/sort.svg" />
+      </div>
+      <ul class="tasks">
+        <li class="task">
+          <p class="task__text">Buy a new gaming laptop</p>
+          <div class="task__icons">
+            <img src="./assets/check.svg" class="task__check" />
+            <img src="./assets/edit.svg" class="task__edit" />
+            <img src="./assets/trash.svg" class="task__trash" />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="../src/js/app.js" type="module"></script>
+  </body>
 </html>

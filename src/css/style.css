@@ -1,6 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+:root {
+  --blue: #8f34ff;
+  --red: #e54e3d;
+  --white: #fafafa;
+  --light-gray: #f2f2f2;
+  --gray: #6c6e70;
+  --text-gray: #91979b;
+}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  cursor: pointer;
+}
+body {
+  height: 100vh;
+}
+div#app {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+}
+div.input-select {
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}
+section.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 455px;
+}
+input {
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding: 0 8px;
+}
+input::placeholder {
+  color: var(--text-gray);
+}
+img.input__add {
+  width: 41px;
+}
+select {
+  appearance: none;
+  padding: 0 10px;
+  font-size: 18px;
+  width: 165px;
+  cursor: pointer;
+}
+img.sort {
+  position: relative;
+  left: -56px;
+  width: 13px;
+}
+ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+li {
+  width: 455px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px 0;
+  background-color: var(--light-gray);
+  padding-left: 15px;
+  border-radius: 2px;
+}
+p.task__text {
+  font-size: 18px;
+}
+div.task__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+}
+div.task__icons img {
+  width: 40px;
 }
