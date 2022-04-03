@@ -31,7 +31,7 @@ div.input-select {
   width: 700px;
   justify-content: space-between;
 }
-section.input {
+form.input {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +48,11 @@ input {
 input::placeholder {
   color: var(--text-gray);
 }
+button {
+  border: none;
+  height: 41px;
+  width: 41px;
+}
 img.input__add {
   width: 41px;
 }
@@ -57,6 +62,7 @@ select {
   font-size: 18px;
   width: 165px;
   cursor: pointer;
+  height: 40px;
 }
 img.sort {
   position: relative;
@@ -77,6 +83,7 @@ li {
   background-color: var(--light-gray);
   padding-left: 15px;
   border-radius: 2px;
+  transition: all 0.2s;
 }
 p.task__text {
   font-size: 18px;
@@ -89,4 +96,10 @@ div.task__icons {
 }
 div.task__icons img {
   width: 40px;
+}
+.check {
+  opacity: 0.5;
+}
+.line-through {
+  text-decoration: line-through #fff 1px;
 }
