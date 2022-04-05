@@ -8,6 +8,7 @@ export default class dom {
 
     this.doc = document.getElementById("app");
     this.doc.innerHTML = `
+    <h1 class="title">Todo App</h1>
     <div class="input-select">
           <form class="input">
             <input type="text" placeholder="Add New Todo" />
@@ -16,13 +17,13 @@ export default class dom {
             </button>
           </form>
           <div class="select">
-        <select>
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+            <select>
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select>
+            <img class="sort" src="./assets/sort.svg" />
         </div>
-        <img class="sort" src="./assets/sort.svg" />
       </div>
       <ul class="tasks"></ul>
     `;

@@ -24,7 +24,14 @@ div#app {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 15%;
+  top: 20%;
+}
+h1.title {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 37px;
 }
 div.input-select {
   display: flex;
@@ -52,9 +59,15 @@ button {
   border: none;
   height: 41px;
   width: 41px;
+  background-color: #fff;
 }
 img.input__add {
   width: 41px;
+  border-radius: 10px;
+}
+div.select {
+  width: 165px;
+  position: relative;
 }
 select {
   appearance: none;
@@ -63,11 +76,15 @@ select {
   width: 165px;
   cursor: pointer;
   height: 40px;
+  background-color: #fff;
+  border: 1px solid var(--gray);
+  color: var(--gray);
 }
 img.sort {
-  position: relative;
-  left: -56px;
+  position: absolute;
+  right: 10px;
   width: 13px;
+  top: 8px;
 }
 ul {
   list-style-type: none;
@@ -102,4 +119,34 @@ div.task__icons img {
 }
 .line-through {
   text-decoration: line-through #fff 1px;
+}
+@media screen and (max-width: 830px) {
+  div.input-select {
+    width: 86vw;
+    flex-direction: column;
+    height: 100px;
+  }
+  div.select {
+    width: 86vw;
+  }
+  select {
+    width: 86vw;
+  }
+  input {
+    width: 73vw;
+  }
+  form.input {
+    width: 86vw;
+  }
+  ul {
+    margin-top: 40px;
+  }
+  li {
+    width: 86vw;
+  }
+}
+@media screen and (max-width: 370px) {
+  h1.title {
+    font-size: 30px;
+  }
 }
