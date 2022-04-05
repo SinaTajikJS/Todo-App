@@ -38,8 +38,8 @@ export default class dom {
 
     // add eventLisetener on select
     this.doc
-      .querySelector("div.select")
-      .addEventListener("click", this.filterTasks);
+      .querySelector("select")
+      .addEventListener("change", this.filterTasks);
   }
   _createTasksHtml(task) {
     return `
