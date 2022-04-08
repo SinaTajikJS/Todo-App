@@ -20,6 +20,7 @@ export default class bridge {
           this.dom.loadTasks();
         }
         this.dom.domInput.value = "";
+        this.dom.changeAddIcon(false);
         this.dom.selected = null;
       },
       deleteTask: (event) => {

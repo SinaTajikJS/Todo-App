@@ -30,9 +30,9 @@ export default class dom {
     this.domInput = this.doc.querySelector("input");
     this.loadTasks();
     this.selected = null;
-
+    this.add = this.doc.querySelector("button.submit");
     // add eventListener on add icon
-    this.doc.querySelector("button.submit").addEventListener("click", (e) => {
+    this.add.addEventListener("click", (e) => {
       this.saveTask(e);
     });
 
@@ -88,7 +88,12 @@ export default class dom {
     const targetTask = tasks.find((task) => task.id == event.target.dataset.id);
     this.domInput.value = targetTask.body;
     this.selected = targetTask.id;
+    this.changeAddIcon(true);
   };
+  changeAddIcon(bool) {
+    const add = this.add.children[0];
+    add.src = bool ? "./assets/tick.svg" : "./assets/add.svg";
+  }
   filterTasks = (e) => {
     const tasks = api.getTasks();
     const value = e.target.value;
